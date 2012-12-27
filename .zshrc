@@ -67,11 +67,15 @@ bindkey -M menuselect 'l' vi-forward-char
 
 # 補完候補のメニュー選択で、矢印キーの代わりにhjklで移動出来るようにする。
 autoload -Uz history-search-end
+autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 bindkey "^R" history-incremental-search-backward
+
+# Shift-Tabで補完候補を逆順する("\e[Z"でも動作する) 
+bindkey "^[[Z" reverse-menu-complete
 
 function google() {
   local str opt
@@ -94,3 +98,5 @@ zle reset-prompt
 }
 zle -N cdup
 bindkey '\^' cdup
+
+source .aliases

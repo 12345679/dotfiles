@@ -20,7 +20,10 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimprock'
+NeoBundle 'ujihisa/neco-ghc'
 
 filetype plugin on
 filetype indent on
+
