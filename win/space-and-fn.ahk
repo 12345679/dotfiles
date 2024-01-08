@@ -30,6 +30,29 @@ global space_and_fn := 0.0
 }
 */
 
+;<jis2us>
+VKF4::Send,{``}    ;         半角/全角     -> `
++VKF4::Send,{~}    ; Shift + 半角/全角     -> ~
++2::Send,{@}       ; Shift + 2         ["] -> @
++6::Send,{^}       ; Shift + 6         [&] -> ^
++7::Send,{&}       ; Shift + 7         ['] -> &
++8::Send,{*}       ; Shift + 8         [(] -> *
++9::Send,{(}       ; Shift + 9         [)] -> (
++0::Send,{)}       ; Shift + 0         [ ] -> )
++-::Send,{_}       ; Shift + -         [=] -> _
+^::Send,{=}        ;                   [^] -> =
++^::Send,{+}       ; Shift + ^         [~] -> +
+@::[              ;                   [@] -> [
++@::{             ; Shift + @         [`] -> {
+[::]              ;                   [[] -> ]
++[::Send,{}}      ; Shift + [         [{] -> }
++;::Send,{:}      ; Shift + ;         [+] -> :
+:::Send,{'}       ;                   [:] -> '
+*::Send,{"}       ; Shift + :         [*] -> "
++]::|             ; Shift + ]         [}] -> |
+]::\              ;                   []] -> \
+;</jis2us>
+
 
 ; AutoHotKey -> F13::Ctrl
 F13::Ctrl
